@@ -128,6 +128,8 @@ public void listarClientes() {
 
 public void cadastrarLivro() {
 
+    Livro livro = new Livro();
+
 }
 
 public void listarLivros() {
