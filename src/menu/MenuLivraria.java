@@ -26,18 +26,49 @@ public class MenuLivraria {
             opcao = scanner.nextInt();
             scanner.nextLine();
 
-        switch (opcao) {
+    switch (opcao) {
 
-            case 0:
-                System.out.println("Encerrado");
-                break;
+        case 1:
+            cadastrarCliente();
+            break;
 
-            default:
-                System.out.println("Opção inválida");
-                break;
+        case 2:
+            listarClientes();
+            break;
 
+        case 3:
+            cadastrarLivro();
+            break;
+
+        case 4:
+            listarLivros();
+            break;
+
+        case 0:
+            System.out.println("Encerrado");
+            break;
+
+        default:
+            System.out.println("Opção inválida");
+            break;
 }
 } while (opcao != 0);
+}
+
+public void cadastrarCliente() {
+
+}
+
+public void listarClientes() {
+
+}
+
+public void cadastrarLivro() {
+
+}
+
+public void listarLivros() {
+
 }
 
 }
