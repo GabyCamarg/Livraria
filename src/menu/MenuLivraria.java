@@ -6,6 +6,8 @@ public class MenuLivraria {
 
     Scanner scanner = new Scanner(System.in);
 
+    int opcao;
+
     public void iniciar() {
 
         System.out.println("======================");
