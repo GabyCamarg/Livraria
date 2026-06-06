@@ -121,6 +121,7 @@ public void listarClientes() {
 
         for(Cliente clienteAtual : clientes) {
 
+            System.out.println("--------------------------");
             System.out.println("ID: " + clienteAtual.id);
             System.out.println("Nome: " + clienteAtual.nome);
             System.out.println("Email: " + clienteAtual.email);
@@ -210,6 +211,7 @@ public void listarLivros() {
 
         for(Livro livroAtual : livros) {
 
+            System.out.println("----------------------------");
             System.out.println("ID: " + livroAtual.id);
             System.out.println("Título: " + livroAtual.titulo);
             System.out.println("Autor: " + livroAtual.autor);
