@@ -16,14 +16,13 @@ public class Main {
 
     int idPedido = 0;
     int idItem = 0;
-}
 
-public void menu() {
+    public void menu() {
 
         Scanner sc = new Scanner(System.in);
         int opcao;
 
-         do {
+        do {
             System.out.println("==== MENU LIVRARIA ====");
             System.out.println("1 - Cadastrar Cliente");
             System.out.println("2 - Listar Clientes");
@@ -33,7 +32,7 @@ public void menu() {
             System.out.println("6 - Listar Pedidos");
             System.out.println("0 - Sair");
 
-             opcao = sc.nextInt();
+            opcao = sc.nextInt();
 
             switch (opcao) {
 
@@ -41,28 +40,28 @@ public void menu() {
                     cadastrarCliente();
                     break;
 
-                    case 2:
+                case 2:
                     listarClientes();
                     break;
 
-                     case 3:
+                case 3:
                     cadastrarLivro();
                     break;
 
-                     case 4:
+                case 4:
                     listarLivros();
                     break;
 
-                    case 5:
+                case 5:
                     criarPedido();
                     break;
 
-                      case 6:
+                case 6:
                     listarPedidos();
                     break;
-
             }
-              } while (opcao != 0);
+
+        } while (opcao != 0);
     }
 
     public void cadastrarCliente() {}
@@ -70,11 +69,7 @@ public void menu() {
     public void cadastrarLivro() {}
     public void listarLivros() {}
 
+    public void criarPedido() {}
 
-    public void criarPedido() {
-
-    }
-
-    public void listarPedidos() {
-
-    }
+    public void listarPedidos() {}
+}
