@@ -174,6 +174,7 @@ public void cadastrarLivro() {
 
         System.out.println("Digite o estoque:");
         estoque = scanner.nextInt();
+        scanner.nextLine();
 
         if(estoque < 0) {
             System.out.println("Estoque inválido");
