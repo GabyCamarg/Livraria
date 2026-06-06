@@ -44,3 +44,7 @@ public void menu() {
                     case 2:
                     listarClientes();
                     break;
+
+                     case 3:
+                    cadastrarLivro();
+                    break;
