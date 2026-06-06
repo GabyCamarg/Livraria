@@ -9,10 +9,17 @@ import model.Pedido;
 import model.ItemPedido;
 import model.CategoriaLivro;
 import model.StatusPedido;
+import dao.PedidoDAO;
+import dao.ClienteDAO;
+import dao.LivroDAO;
 
 public class MenuLivraria {
 
     Scanner scanner = new Scanner(System.in);
+
+    ClienteDAO clienteDAO = new ClienteDAO();
+    LivroDAO livroDAO = new LivroDAO();
+    PedidoDAO pedidoDAO = new PedidoDAO();
 
     ArrayList<Cliente> clientes = new ArrayList<>();
     ArrayList<Livro> livros = new ArrayList<>();
@@ -131,23 +138,7 @@ public void cadastrarCliente() {
 }
 
 public void listarClientes() {
-
-    if(clientes.isEmpty()) {
-    System.out.println("Nenhum cliente cadastrado.");
-}
-    else {
-
-        for(Cliente clienteAtual : clientes) {
-
-            System.out.println("--------------------------");
-            System.out.println("ID: " + clienteAtual.id);
-            System.out.println("Nome: " + clienteAtual.nome);
-            System.out.println("Email: " + clienteAtual.email);
-            System.out.println("--------------------------");
-}
-
-}
-
+    clienteDAO.listarClientes();
 }
 
 public void cadastrarLivro() {
@@ -258,28 +249,8 @@ public void cadastrarLivro() {
 }
 
 public void listarLivros() {
-
-    if(livros.isEmpty()) {
-        System.out.println("Nenhum livro cadastrado.");
+    livroDAO.listarLivros();
 }
-    else {
-
-        for(Livro livroAtual : livros) {
-
-            System.out.println("----------------------------");
-            System.out.println("ID: " + livroAtual.id);
-            System.out.println("Título: " + livroAtual.titulo);
-            System.out.println("Autor: " + livroAtual.autor);
-            System.out.println("Preço: " + livroAtual.preco);
-            System.out.println("Estoque: " + livroAtual.estoque);
-            System.out.println("Categoria: " + livroAtual.categoria);
-            System.out.println("----------------------------");
-
-}
-}
-
-}
-
 public void criarPedido() {
 
     Pedido pedido = new Pedido();
