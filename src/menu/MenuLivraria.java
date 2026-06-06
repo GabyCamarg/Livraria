@@ -182,6 +182,11 @@ public void cadastrarLivro() {
 
 } while(estoque < 0);
 
+    livro.titulo = titulo;
+    livro.autor = autor;
+    livro.preco = preco;
+    livro.estoque = estoque;
+
 }
 
 public void listarLivros() {
