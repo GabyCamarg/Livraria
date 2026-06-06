@@ -203,6 +203,10 @@ public void cadastrarLivro() {
 
 public void listarLivros() {
 
+    if(livros.isEmpty()) {
+    System.out.println("Nenhum livro cadastrado.");
+}
+
 }
 
 }
