@@ -24,7 +24,11 @@ public class MenuLivraria {
         opcao = scanner.nextInt();
         scanner.nextLine();
 
-        switch (opcao) {
+    switch (opcao) {
+
+        case 0:
+            System.out.println("Encerrado");
+        break;
 
 }
 }
