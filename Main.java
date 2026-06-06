@@ -62,3 +62,19 @@ public void menu() {
                     break;
 
             }
+              } while (opcao != 0);
+    }
+
+    public void cadastrarCliente() {}
+    public void listarClientes() {}
+    public void cadastrarLivro() {}
+    public void listarLivros() {}
+
+
+    public void criarPedido() {
+
+    }
+
+    public void listarPedidos() {
+
+    }
