@@ -1,8 +1,9 @@
 package model;
 
 public class Cliente {
-    
-    String nome;
-    String email;
-    int id;
+
+    public String nome;
+    public String email;
+    public int id;
+
 }
