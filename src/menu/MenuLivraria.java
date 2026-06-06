@@ -103,6 +103,8 @@ public void cadastrarCliente() {
 
         clientes.add(cliente);
 
+        System.out.println("Cliente cadastrado com sucesso!");
+
 }
 
 public void listarClientes() {
