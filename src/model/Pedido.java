@@ -4,6 +4,7 @@ public class Pedido {
 
     public int id;
     public int idCliente;
+    public String nomeCliente;
     public String status;
 
 }
