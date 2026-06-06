@@ -12,6 +12,7 @@ import model.StatusPedido;
 import dao.PedidoDAO;
 import dao.ClienteDAO;
 import dao.LivroDAO;
+import service.ProcessadorPedidos;
 
 public class MenuLivraria {
 
@@ -20,6 +21,7 @@ public class MenuLivraria {
     ClienteDAO clienteDAO = new ClienteDAO();
     LivroDAO livroDAO = new LivroDAO();
     PedidoDAO pedidoDAO = new PedidoDAO();
+    ProcessadorPedidos processador = new ProcessadorPedidos();
 
     ArrayList<Cliente> clientes = new ArrayList<>();
     ArrayList<Livro> livros = new ArrayList<>();
@@ -33,6 +35,8 @@ public class MenuLivraria {
     int idItem = 0;
 
     public void iniciar() {
+
+        processador.start();
 
         do {
 
@@ -79,6 +83,7 @@ public class MenuLivraria {
             break;
 
         case 0:
+            processador.encerrar();
             System.out.println("Encerrado");
             break;
 

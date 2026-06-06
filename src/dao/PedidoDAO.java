@@ -133,4 +133,50 @@ public class PedidoDAO {
 
     }
 }
+
+    public Integer buscarPedidoNaFila() {
+
+    String sql = "SELECT id_pedido FROM pedido WHERE status = 'FILA' LIMIT 1";
+
+    try {
+
+        Connection conn = Conexao.conectar();
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        ResultSet rs = stmt.executeQuery();
+
+        if(rs.next()) {
+            int idPedido = rs.getInt("id_pedido");
+            conn.close();
+            return idPedido;
+        }
+
+        conn.close();
+
+    } catch(Exception e) {
+        System.out.println("Erro: " + e.getMessage());
+    }
+
+    return null;
+}
+
+public void atualizarStatus(int idPedido, String status) {
+
+    String sql = "UPDATE pedido SET status = ? WHERE id_pedido = ?";
+
+    try {
+
+        Connection conn = Conexao.conectar();
+        PreparedStatement stmt = conn.prepareStatement(sql);
+
+        stmt.setString(1, status);
+        stmt.setInt(2, idPedido);
+
+        stmt.executeUpdate();
+
+        conn.close();
+
+    } catch(Exception e) {
+        System.out.println("Erro: " + e.getMessage());
+    }
+}
 }
