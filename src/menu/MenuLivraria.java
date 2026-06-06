@@ -82,6 +82,9 @@ public void cadastrarCliente() {
 
 } while(nome.isBlank());
 
+    System.out.println("Digite seu email:");
+    email = scanner.nextLine();
+
 }
 
 public void listarClientes() {
