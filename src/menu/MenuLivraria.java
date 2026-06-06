@@ -23,6 +23,10 @@ public class MenuLivraria {
 
         opcao = scanner.nextInt();
         scanner.nextLine();
+
+        switch (opcao) {
+
+}
 }
 
 }
