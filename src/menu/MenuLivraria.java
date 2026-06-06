@@ -71,8 +71,16 @@ public void cadastrarCliente() {
 
     System.out.println("Cadastro de Clientes");
 
+    do {
+
     System.out.println("Digite seu nome:");
     nome = scanner.nextLine();
+
+    if(nome.isBlank()) {
+        System.out.println("Nome inválido");
+    }
+
+} while(nome.isBlank());
 
 }
 
