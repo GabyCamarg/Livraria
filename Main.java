@@ -40,3 +40,7 @@ public void menu() {
                 case 1:
                     cadastrarCliente();
                     break;
+
+                    case 2:
+                    listarClientes();
+                    break;
