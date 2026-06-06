@@ -64,6 +64,8 @@ public class MenuLivraria {
 
 public void cadastrarCliente() {
 
+    Cliente cliente = new Cliente();
+
 }
 
 public void listarClientes() {
