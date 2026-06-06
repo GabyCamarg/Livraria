@@ -6,6 +6,14 @@ public class TesteLivroDAO {
 
         LivroDAO livroDAO = new LivroDAO();
 
+        livroDAO.cadastrarLivro(
+                "Java Completo",
+                "Nelio Alves",
+                89.90,
+                20,
+                "Programacao"
+        );
+
         livroDAO.listarLivros();
 
     }
