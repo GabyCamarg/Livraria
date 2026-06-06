@@ -32,3 +32,11 @@ public void menu() {
             System.out.println("5 - Criar Pedido");
             System.out.println("6 - Listar Pedidos");
             System.out.println("0 - Sair");
+
+             opcao = sc.nextInt();
+
+            switch (opcao) {
+
+                case 1:
+                    cadastrarCliente();
+                    break;
