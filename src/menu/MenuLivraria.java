@@ -73,26 +73,26 @@ public void cadastrarCliente() {
 
     do {
 
-    System.out.println("Digite seu nome:");
-    nome = scanner.nextLine();
+        System.out.println("Digite seu nome:");
+        nome = scanner.nextLine();
 
-    if(nome.isBlank()) {
-        System.out.println("Nome inválido");
-    }
+        if(nome.isBlank()) {
+            System.out.println("Nome inválido");
+        }
 
 } while(nome.isBlank());
 
     do {
 
-    System.out.println("Digite seu email:");
-    email = scanner.nextLine();
+        System.out.println("Digite seu email:");
+        email = scanner.nextLine();
 
-    if(email.isBlank() ||
-       !email.contains("@") ||
-       !email.contains(".")) {
+        if(email.isBlank() ||
+        !email.contains("@") ||
+        !email.contains(".")) {
 
-        System.out.println("Email inválido");
-    }
+            System.out.println("Email inválido");
+        }
 
 } while(email.isBlank() ||
         !email.contains("@") ||
@@ -100,6 +100,8 @@ public void cadastrarCliente() {
 
         cliente.nome = nome;
         cliente.email = email;
+
+        clientes.add(cliente);
 
 }
 
