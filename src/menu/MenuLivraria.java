@@ -114,6 +114,10 @@ public void listarClientes() {
 }
     else {
 
+        for(Cliente clienteAtual : clientes) {
+
+}
+
 }
 
 }
