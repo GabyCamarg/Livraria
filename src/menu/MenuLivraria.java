@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 import model.Cliente;
 import model.Livro;
+import model.Pedido;
+import model.ItemPedido;
 
 public class MenuLivraria {
 
@@ -12,10 +14,14 @@ public class MenuLivraria {
 
     ArrayList<Cliente> clientes = new ArrayList<>();
     ArrayList<Livro> livros = new ArrayList<>();
+    ArrayList<Pedido> pedidos = new ArrayList<>();
+    ArrayList<ItemPedido> itensPedido = new ArrayList<>();
 
     int opcao;
     int idCliente = 0;
     int idLivro = 0;
+    int idPedido = 0;
+    int idItem = 0;
 
     public void iniciar() {
 
@@ -28,6 +34,8 @@ public class MenuLivraria {
             System.out.println("2 - Listar Clientes");
             System.out.println("3 - Cadastrar Livro");
             System.out.println("4 - Listar Livros");
+            System.out.println("5 - Criar Pedido");
+            System.out.println("6 - Listar Pedidos");
             System.out.println("0 - Sair");
             System.out.println("======================");
             System.out.println("Escolha uma opção: ");
@@ -51,6 +59,14 @@ public class MenuLivraria {
 
         case 4:
             listarLivros();
+            break;
+
+        case 5:
+            criarPedido();
+            break;
+
+        case 6:
+            listarPedidos();
             break;
 
         case 0:
@@ -221,6 +237,14 @@ public void listarLivros() {
 
 }
 }
+
+}
+
+public void criarPedido() {
+
+}
+
+public void listarPedidos() {
 
 }
 
