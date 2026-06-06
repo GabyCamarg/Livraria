@@ -206,7 +206,42 @@ public void cadastrarLivro() {
 
 } while(estoque < 0);
 
-    livro.categoria = CategoriaLivro.ROMANCE;
+    System.out.println("Categorias:");
+    System.out.println("1 - ROMANCE");
+    System.out.println("2 - INFANTIL");
+    System.out.println("3 - FICCAO");
+    System.out.println("4 - TECNOLOGIA");
+    System.out.println("5 - TERROR");
+
+    int opcaoCategoria = scanner.nextInt();
+    scanner.nextLine();
+
+    switch(opcaoCategoria) {
+
+        case 1:
+            livro.categoria = CategoriaLivro.ROMANCE;
+            break;
+
+        case 2:
+            livro.categoria = CategoriaLivro.INFANTIL;
+            break;
+
+        case 3:
+            livro.categoria = CategoriaLivro.FICCAO;
+            break;
+
+        case 4:
+            livro.categoria = CategoriaLivro.TECNOLOGIA;
+            break;
+
+        case 5:
+            livro.categoria = CategoriaLivro.TERROR;
+            break;
+
+        default:
+            livro.categoria = CategoriaLivro.FICCAO;
+            break;
+}
 
     livro.titulo = titulo;
     livro.autor = autor;
@@ -237,6 +272,7 @@ public void listarLivros() {
             System.out.println("Autor: " + livroAtual.autor);
             System.out.println("Preço: " + livroAtual.preco);
             System.out.println("Estoque: " + livroAtual.estoque);
+            System.out.println("Categoria: " + livroAtual.categoria);
             System.out.println("----------------------------");
 
 }
