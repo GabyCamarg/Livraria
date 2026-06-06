@@ -98,6 +98,9 @@ public void cadastrarCliente() {
         !email.contains("@") ||
         !email.contains("."));
 
+        cliente.nome = nome;
+        cliente.email = email;
+
 }
 
 public void listarClientes() {
