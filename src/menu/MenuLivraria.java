@@ -210,6 +210,13 @@ public void listarLivros() {
 
         for(Livro livroAtual : livros) {
 
+            System.out.println("ID: " + livroAtual.id);
+            System.out.println("Título: " + livroAtual.titulo);
+            System.out.println("Autor: " + livroAtual.autor);
+            System.out.println("Preço: " + livroAtual.preco);
+            System.out.println("Estoque: " + livroAtual.estoque);
+            System.out.println("----------------------------");
+
 }
 }
 
