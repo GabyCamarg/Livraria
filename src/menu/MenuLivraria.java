@@ -71,6 +71,9 @@ public void cadastrarCliente() {
 
     System.out.println("Cadastro de Clientes");
 
+    System.out.println("Digite seu nome:");
+    nome = scanner.nextLine();
+
 }
 
 public void listarClientes() {
