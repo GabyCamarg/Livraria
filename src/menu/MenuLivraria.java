@@ -116,6 +116,10 @@ public void listarClientes() {
 
         for(Cliente clienteAtual : clientes) {
 
+            System.out.println("ID: " + clienteAtual.id);
+            System.out.println("Nome: " + clienteAtual.nome);
+            System.out.println("Email: " + clienteAtual.email);
+            System.out.println("--------------------------");
 }
 
 }
