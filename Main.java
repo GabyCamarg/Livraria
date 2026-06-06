@@ -56,3 +56,9 @@ public void menu() {
                     case 5:
                     criarPedido();
                     break;
+
+                      case 6:
+                    listarPedidos();
+                    break;
+
+            }
