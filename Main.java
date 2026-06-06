@@ -52,3 +52,7 @@ public void menu() {
                      case 4:
                     listarLivros();
                     break;
+
+                    case 5:
+                    criarPedido();
+                    break;
