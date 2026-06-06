@@ -10,31 +10,34 @@ public class MenuLivraria {
 
     public void iniciar() {
 
-        System.out.println("======================");
-        System.out.println("      LIVRARIA");
-        System.out.println("======================");
-        System.out.println("1 - Cadastrar Cliente");
-        System.out.println("2 - Listar Clientes");
-        System.out.println("3 - Cadastrar Livro");
-        System.out.println("4 - Listar Livros");
-        System.out.println("0 - Sair");
-        System.out.println("======================");
-        System.out.println("Escolha uma opção: ");
+        do {
 
-        opcao = scanner.nextInt();
-        scanner.nextLine();
+            System.out.println("======================");
+            System.out.println("      LIVRARIA");
+            System.out.println("======================");
+            System.out.println("1 - Cadastrar Cliente");
+            System.out.println("2 - Listar Clientes");
+            System.out.println("3 - Cadastrar Livro");
+            System.out.println("4 - Listar Livros");
+            System.out.println("0 - Sair");
+            System.out.println("======================");
+            System.out.println("Escolha uma opção: ");
 
-    switch (opcao) {
+            opcao = scanner.nextInt();
+            scanner.nextLine();
 
-        case 0:
-            System.out.println("Encerrado");
-            break;
+        switch (opcao) {
 
-        default:
-            System.out.println("Opção inválida");
-            break;
+            case 0:
+                System.out.println("Encerrado");
+                break;
+
+            default:
+                System.out.println("Opção inválida");
+                break;
 
 }
+} while (opcao != 0);
 }
 
 }
