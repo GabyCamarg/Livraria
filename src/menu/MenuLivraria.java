@@ -130,6 +130,11 @@ public void cadastrarLivro() {
 
     Livro livro = new Livro();
 
+    String titulo;
+    String autor;
+    double preco;
+    int estoque;
+
 }
 
 public void listarLivros() {
