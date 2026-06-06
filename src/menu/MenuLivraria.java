@@ -14,6 +14,8 @@ public class MenuLivraria {
     ArrayList<Livro> livros = new ArrayList<>();
 
     int opcao;
+    int idCliente = 0;
+    int idLivro = 0;
 
     public void iniciar() {
 
@@ -101,6 +103,9 @@ public void cadastrarCliente() {
         cliente.nome = nome;
         cliente.email = email;
 
+        idCliente++;
+        cliente.id = idCliente;
+
         clientes.add(cliente);
 
         System.out.println("Cliente cadastrado com sucesso!");
@@ -186,6 +191,13 @@ public void cadastrarLivro() {
     livro.autor = autor;
     livro.preco = preco;
     livro.estoque = estoque;
+
+    idLivro++;
+    livro.id = idLivro;
+
+    livros.add(livro);
+
+        System.out.println("Livro cadastrado com sucesso!");
 
 }
 

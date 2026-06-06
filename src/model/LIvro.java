@@ -2,10 +2,10 @@ package model;
 
 public class Livro {
     
-    int id;
-    String titulo;
-    String autor;
-    double preco;
-    int estoque;
+    public int id;
+    public String titulo;
+    public String autor;
+    public double preco;
+    public int estoque;
 
 }
