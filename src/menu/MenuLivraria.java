@@ -1,14 +1,10 @@
 package menu;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 
-import model.Cliente;
+
 import model.Livro;
-import model.Pedido;
-import model.ItemPedido;
 import model.CategoriaLivro;
-import model.StatusPedido;
 import dao.PedidoDAO;
 import dao.ClienteDAO;
 import dao.LivroDAO;
@@ -23,16 +19,7 @@ public class MenuLivraria {
     PedidoDAO pedidoDAO = new PedidoDAO();
     ProcessadorPedidos processador = new ProcessadorPedidos();
 
-    ArrayList<Cliente> clientes = new ArrayList<>();
-    ArrayList<Livro> livros = new ArrayList<>();
-    ArrayList<Pedido> pedidos = new ArrayList<>();
-    ArrayList<ItemPedido> itensPedido = new ArrayList<>();
-
     int opcao;
-    int idCliente = 0;
-    int idLivro = 0;
-    int idPedido = 0;
-    int idItem = 0;
 
     public void iniciar() {
 
