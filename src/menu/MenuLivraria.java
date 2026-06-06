@@ -125,15 +125,10 @@ public void cadastrarCliente() {
         !email.contains("@") ||
         !email.contains("."));
 
-        cliente.nome = nome;
-        cliente.email = email;
+        System.out.println("Digite seu telefone:");
+        String telefone = scanner.nextLine();
 
-        idCliente++;
-        cliente.id = idCliente;
-
-        clientes.add(cliente);
-
-        System.out.println("Cliente cadastrado com sucesso!");
+        clienteDAO.cadastrarCliente(nome, email, telefone);
 
 }
 
@@ -234,17 +229,13 @@ public void cadastrarLivro() {
             break;
 }
 
-    livro.titulo = titulo;
-    livro.autor = autor;
-    livro.preco = preco;
-    livro.estoque = estoque;
-
-    idLivro++;
-    livro.id = idLivro;
-
-    livros.add(livro);
-
-        System.out.println("Livro cadastrado com sucesso!");
+    livroDAO.cadastrarLivro(
+    titulo,
+    autor,
+    preco,
+    estoque,
+    livro.categoria.name()
+);
 
 }
 
@@ -253,110 +244,25 @@ public void listarLivros() {
 }
 public void criarPedido() {
 
-    Pedido pedido = new Pedido();
-    ItemPedido item = new ItemPedido();
-
-    int idClientePedido;
-    int idLivroPedido;
+    int idCliente;
+    int idLivro;
     int quantidade;
 
-    Cliente clienteEscolhido = null;
-    Livro livroEscolhido = null;
-
     System.out.println("Digite o ID do cliente:");
-    idClientePedido = scanner.nextInt();
-
-    for(Cliente clienteAtual : clientes) {
-        if(clienteAtual.id == idClientePedido) {
-            clienteEscolhido = clienteAtual;
-        }
-    }
-
-    if(clienteEscolhido == null) {
-        System.out.println("Cliente não encontrado.");
-        scanner.nextLine();
-        return;
-    }
+    idCliente = scanner.nextInt();
 
     System.out.println("Digite o ID do livro:");
-    idLivroPedido = scanner.nextInt();
-
-    for(Livro livroAtual : livros) {
-        if(livroAtual.id == idLivroPedido) {
-            livroEscolhido = livroAtual;
-        }
-    }
-
-    if(livroEscolhido == null) {
-        System.out.println("Livro não encontrado.");
-        scanner.nextLine();
-        return;
-    }
+    idLivro = scanner.nextInt();
 
     System.out.println("Digite a quantidade:");
     quantidade = scanner.nextInt();
     scanner.nextLine();
 
-    if(quantidade <= 0) {
-        System.out.println("Quantidade inválida.");
-        return;
-    }
-
-    if(livroEscolhido.estoque < quantidade) {
-        System.out.println("Estoque insuficiente.");
-        return;
-    }
-
-    livroEscolhido.estoque -= quantidade;
-
-    idPedido++;
-    pedido.id = idPedido;
-    pedido.idCliente = clienteEscolhido.id;
-    pedido.nomeCliente = clienteEscolhido.nome;
-    pedido.status = StatusPedido.FILA;
-
-    idItem++;
-    item.id = idItem;
-    item.idPedido = pedido.id;
-    item.idLivro = livroEscolhido.id;
-    item.tituloLivro = livroEscolhido.titulo;
-    item.quantidade = quantidade;
-    item.valorUnitario = livroEscolhido.preco;
-
-    pedidos.add(pedido);
-    itensPedido.add(item);
-
-    System.out.println("Pedido criado com sucesso!");
-    System.out.println("Status: " + pedido.status);
+    pedidoDAO.criarPedido(idCliente, idLivro, quantidade);
 }
 
 public void listarPedidos() {
-
-    if(pedidos.isEmpty()) {
-        System.out.println("Nenhum pedido cadastrado.");
-    } else {
-
-        for(Pedido pedidoAtual : pedidos) {
-
-            System.out.println("----------------------------");
-            System.out.println("Pedido ID: " + pedidoAtual.id);
-            System.out.println("Cliente: " + pedidoAtual.nomeCliente);
-            System.out.println("Status: " + pedidoAtual.status);
-
-            for(ItemPedido itemAtual : itensPedido) {
-
-                if(itemAtual.idPedido == pedidoAtual.id) {
-                    System.out.println("Livro: " + itemAtual.tituloLivro);
-                    System.out.println("Quantidade: " + itemAtual.quantidade);
-                    System.out.println("Valor unitário: " + itemAtual.valorUnitario);
-                    System.out.println("Total: " + (itemAtual.quantidade * itemAtual.valorUnitario));
-                }
-
-            }
-
-            System.out.println("----------------------------");
-        }
-    }
+    pedidoDAO.listarPedidos();
 }
 
 }
