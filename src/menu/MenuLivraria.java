@@ -82,8 +82,21 @@ public void cadastrarCliente() {
 
 } while(nome.isBlank());
 
+    do {
+
     System.out.println("Digite seu email:");
     email = scanner.nextLine();
+
+    if(email.isBlank() ||
+       !email.contains("@") ||
+       !email.contains(".")) {
+
+        System.out.println("Email inválido");
+    }
+
+} while(email.isBlank() ||
+        !email.contains("@") ||
+        !email.contains("."));
 
 }
 
