@@ -170,6 +170,17 @@ public void cadastrarLivro() {
 
 } while(preco <= 0);
 
+    do {
+
+        System.out.println("Digite o estoque:");
+        estoque = scanner.nextInt();
+
+        if(estoque < 0) {
+            System.out.println("Estoque inválido");
+        }
+
+} while(estoque < 0);
+
 }
 
 public void listarLivros() {
