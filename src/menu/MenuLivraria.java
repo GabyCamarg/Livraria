@@ -139,14 +139,36 @@ public void cadastrarLivro() {
 
     do {
 
-    System.out.println("Digite o título:");
-    titulo = scanner.nextLine();
+        System.out.println("Digite o título:");
+        titulo = scanner.nextLine();
 
-    if(titulo.isBlank()) {
-        System.out.println("Título inválido");
-    }
+        if(titulo.isBlank()) {
+            System.out.println("Título inválido");
+        }
 
 } while(titulo.isBlank());
+
+    do {
+
+        System.out.println("Digite o autor:");
+        autor = scanner.nextLine();
+
+        if(autor.isBlank()) {
+            System.out.println("Autor inválido");
+        }
+
+} while(autor.isBlank());
+
+    do {
+
+        System.out.println("Digite o preço:");
+        preco = scanner.nextDouble();
+
+        if(preco <= 0) {
+            System.out.println("Preço inválido");
+        }
+
+} while(preco <= 0);
 
 }
 
