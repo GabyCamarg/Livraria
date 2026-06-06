@@ -7,6 +7,8 @@ import model.Cliente;
 import model.Livro;
 import model.Pedido;
 import model.ItemPedido;
+import model.CategoriaLivro;
+import model.StatusPedido;
 
 public class MenuLivraria {
 
@@ -204,6 +206,8 @@ public void cadastrarLivro() {
 
 } while(estoque < 0);
 
+    livro.categoria = CategoriaLivro.ROMANCE;
+
     livro.titulo = titulo;
     livro.autor = autor;
     livro.preco = preco;
@@ -302,7 +306,7 @@ public void criarPedido() {
     pedido.id = idPedido;
     pedido.idCliente = clienteEscolhido.id;
     pedido.nomeCliente = clienteEscolhido.nome;
-    pedido.status = "FILA";
+    pedido.status = StatusPedido.FILA;
 
     idItem++;
     item.id = idItem;

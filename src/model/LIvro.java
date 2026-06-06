@@ -7,6 +7,6 @@ public class Livro {
     public String autor;
     public double preco;
     public int estoque;
-    public String categoria;
+    public CategoriaLivro categoria;
 
 }
