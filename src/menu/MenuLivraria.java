@@ -137,6 +137,17 @@ public void cadastrarLivro() {
 
     System.out.println("Cadastro de Livros");
 
+    do {
+
+    System.out.println("Digite o título:");
+    titulo = scanner.nextLine();
+
+    if(titulo.isBlank()) {
+        System.out.println("Título inválido");
+    }
+
+} while(titulo.isBlank());
+
 }
 
 public void listarLivros() {
