@@ -22,3 +22,13 @@ public void menu() {
 
         Scanner sc = new Scanner(System.in);
         int opcao;
+
+         do {
+            System.out.println("==== MENU LIVRARIA ====");
+            System.out.println("1 - Cadastrar Cliente");
+            System.out.println("2 - Listar Clientes");
+            System.out.println("3 - Cadastrar Livro");
+            System.out.println("4 - Listar Livros");
+            System.out.println("5 - Criar Pedido");
+            System.out.println("6 - Listar Pedidos");
+            System.out.println("0 - Sair");
