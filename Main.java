@@ -17,3 +17,8 @@ public class Main {
     int idPedido = 0;
     int idItem = 0;
 }
+
+public void menu() {
+
+        Scanner sc = new Scanner(System.in);
+        int opcao;
