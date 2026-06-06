@@ -1,10 +1,17 @@
 package menu;
 
 import java.util.Scanner;
+import java.util.ArrayList;
+
+import model.Cliente;
+import model.Livro;
 
 public class MenuLivraria {
 
     Scanner scanner = new Scanner(System.in);
+
+    ArrayList<Cliente> clientes = new ArrayList<>();
+    ArrayList<Livro> livros = new ArrayList<>();
 
     int opcao;
 
