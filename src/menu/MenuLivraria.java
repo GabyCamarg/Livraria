@@ -108,9 +108,12 @@ public void cadastrarCliente() {
 }
 
 public void listarClientes() {
-    
+
     if(clientes.isEmpty()) {
     System.out.println("Nenhum cliente cadastrado.");
+}
+    else {
+
 }
 
 }
