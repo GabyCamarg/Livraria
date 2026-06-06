@@ -69,6 +69,8 @@ public void cadastrarCliente() {
     String nome;
     String email;
 
+    System.out.println("Cadastro de Clientes");
+
 }
 
 public void listarClientes() {
