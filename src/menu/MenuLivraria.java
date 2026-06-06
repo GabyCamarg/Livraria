@@ -66,6 +66,9 @@ public void cadastrarCliente() {
 
     Cliente cliente = new Cliente();
 
+    String nome;
+    String email;
+
 }
 
 public void listarClientes() {
