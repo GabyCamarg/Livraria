@@ -48,3 +48,7 @@ public void menu() {
                      case 3:
                     cadastrarLivro();
                     break;
+
+                     case 4:
+                    listarLivros();
+                    break;
